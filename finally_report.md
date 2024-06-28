@@ -1,59 +1,77 @@
 # Analyzing Global Sentiment on the Saudi Cup
 
 
-![cover](images/cover.png)
+![](images/cover.png)
 
 JALAWI Mohammed ALWAJI 
+
 jlwyalwajy@gmail.com
 
 
-## Index
+## Index Content 
 
-### Chapter 1: Introduction
-1.1 Project Overview  
-1.2 Saudi Horse Cup
-1.3 Objectives  
-1.4 Scope of the Study  
-1.4 Significance of the Study  
+```
 
-### Chapter 2: Data Collection
-2.1 Data Sources  
-2.2 Data Collection Methods  
-2.3 Twitter API Integration  
-2.4 Data Sampling Strategy  
-2.5 Ethical Considerations  
+Index ........................................................... ii
+List of Figures .................................................... iv
+List of Tables ..................................................... v
+### Chapter 1: Introduction ............................................ 1
+   1.1 Project Overview ............................................ 1
+   1.2 Saudi Horse Cup ............................................. 2
+   1.3 Objectives .................................................. 3
+   1.4 Scope of the Study .......................................... 4
+   1.5 Significance of the Study ................................... 5
+### Chapter 2: Data Collection ......................................... 7
+   2.1 Data Sources ................................................ 7
+   2.2 Data Collection Methods ..................................... 8
+   2.3 Data Sampling Strategy ...................................... 10
+   2.4 Ethical Considerations ...................................... 11
+### Chapter 3: Data Visualization and Preprocessing .................... 13
+   3.1 Data Exploration and Cleaning ............................... 13
+   3.2 Data Visualization .......................................... 14
+   3.3 Data Preprocessing .......................................... 17
+### Chapter 4: Sentiment Analysis ...................................... 19
+   4.1 Sentiment Analysis Overview ................................. 19
+   4.2 Model Selection ............................................. 20
+   4.3 Sentiment Analysis Implementation ........................... 21
+   4.4 Sentiment Analysis Results and Visualization ................ 22
+### Chapter 5: Conclusion and Future Work .............................. 24
+   5.1 Summary of Findings ......................................... 24
+   5.2 Implications of the Study ................................... 25
+   5.3 Limitations ................................................. 26
+   5.4 Recommendations for Future Research ......................... 27
+   5.5 Closing Remarks ............................................. 28
+References ......................................................... 29
+Appendices ......................................................... 31
+   A.1 Data Dictionary ............................................. 31
+   A.2 Glossary of Terms ........................................... 34
 
-### Chapter 3: Data Visualization and Preprocessing
-3.1 Data Exploration and Cleaning
-3.2 Data Visualization  
-3.3 Data Preprocessing
-
-### Chapter 4: Sentiment Analysis
-4.1 Sentiment Analysis Overview  
-4.2 Model Selection  
-4.3 Sentiment Analysis Implementation
-4.4 Sentiment Analysis Results and Visualization
-
-### Chapter 5: Conclusion and Future Work
-5.1 Summary of Findings  
-5.2 Implications of the Study  
-5.3 Limitations  
-5.4 Recommendations for Future Research  
-5.5 Closing Remarks  
-
-### References
-
-### Appendices 
-A.1 Data Dictionary  
-A.2 Glossary of Terms
+```
 
 
+## List of Figures
+
+```
+Figure 1: Pie chart of tweet languages ............................. 14
+Figure 2: Histogram of tweet lengths ............................... 15
+Figure 3: Line plot of tweet count over time ....................... 15
+Figure 4: Word cloud of hashtags ................................... 16
+Figure 5: Horizontal bar plot of top 10 countries by user count .... 16
+Figure 6: Bar plot of top 10 users by follower count ............... 17
+Figure 7: Sentiment Distribution Pie Chart ......................... 22
+Figure 8: Sentiment vs. Retweet Count Scatter Plot ................. 23
+```
+
+## List of Tables
+```
+Table 1: Data Dictionary ........................................... 31
+```
 
 ## Chapter 1: Introduction
 
 ### 1.1 Project Overview
 
-This project aims to analyze global sentiment and reactions towards the Saudi Horse Cup by collecting and classifying Twitter comments. The study will involve gathering a large dataset of tweets related to the event, preprocessing the data, and applying sentiment analysis techniques to categorize the tweets into positive, negative, or neutral sentiment. By examining the sentiment distribution and trends across different geographical regions, we seek to gain insights into the public perception and impact of the Saudi Horse Cup on a global scale. The project will leverage natural language processing and machine learning algorithms to automate the sentiment classification process. Additionally, data visualization techniques will be employed to present the findings in an intuitive and informative manner. The ultimate goal is to provide a comprehensive understanding of the global sentiment surrounding the Saudi Horse Cup and identify any notable patterns or variations in opinions across different regions.
+This project aims to analyze global sentiment and reactions towards the Saudi Horse Cup by collecting and classifying X (formerly Twitter) comments. The study will involve gathering a large dataset of tweets related to the event, preprocessing the data, and applying sentiment analysis techniques to categorize the tweets into positive, negative, or neutral sentiment. By examining the sentiment distribution and trends across different geographical regions, we seek to gain insights into the public perception and impact of the Saudi Horse Cup on a global scale. The project will leverage natural language processing and machine learning algorithms to automate the sentiment classification process. Additionally, data visualization techniques will be employed to present the findings in an intuitive and informative manner. The ultimate goal is to provide a comprehensive understanding of the global sentiment surrounding the Saudi Horse Cup and identify any notable patterns or variations in opinions across different regions.
 
 ### 1.2 Saudi Horse Cup
 
@@ -72,7 +90,7 @@ The main objectives of this study are as follows:
 ### 1.4 Scope of the Study
 The scope of this study is focused on analyzing global sentiment towards the Saudi Horse Cup using Twitter data. The study will cover the following aspects:
 
-    1. Data collection: The study will gather Twitter comments related to the Saudi Horse Cup from a specified time period, encompassing the event's duration and its immediate aftermath.
+    1. Data collection: The study will gather Twitter X (formerly Twitter) comments related to the Saudi Horse Cup from a specified time period, encompassing the event's duration and its immediate aftermath.
     2. Geographical coverage: The study will aim to collect data from various geographical regions to ensure a comprehensive global perspective.
     3. Sentiment analysis: The collected tweets will be subjected to sentiment analysis techniques to classify them into positive, negative, or neutral sentiment categories.
     4. Data visualization: The study will employ data visualization techniques to present the sentiment distribution, geographical variations, and other relevant findings in a clear and understandable manner.
@@ -401,7 +419,6 @@ Below is a table with columns and their descriptions for the provided dataset:
 |---------------------------------|----------------------------------------------------------------------------------------------|
 | id                              | Unique identifier for each tweet                                                             |
 | created_at                      | Creation date and time of the tweet (in original format)                                     |
-| created_at_datetime             | Creation date and time of the tweet (converted to datetime format)                           |
 | text                            | Text content of the tweet                                                                    |
 | lang                            | Language of the tweet                                                                        |
 | in_reply_to                     | ID of the tweet to which this tweet is a reply                                               |
