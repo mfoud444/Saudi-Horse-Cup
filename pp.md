@@ -89,7 +89,7 @@ To ensure the quality and consistency of our dataset, we implemented several dat
 
 The effectiveness of our pre-processing steps was visualized through various charts, including a histogram of tweet lengths (Figure 2) and a word cloud of frequently used hashtags (Figure 4).
 
-![Histogram of tweet lengths](images/tweet_length_distribution.png "Figure 2: Distribution of Tweet Lengths After Pre-processing")
+![Figure 2: Distribution of Tweet Lengths After Pre-processing](images/tweet_length_distribution.png)
 
 ## 3.3. Sentiment Annotation
 
@@ -169,6 +169,16 @@ The results of our evaluation and the insights gained from applying the model to
 Our sentiment analysis of tweets related to the Saudi Horse Cup revealed several key findings that contribute to the understanding of public perception towards major sporting events. The BERT-based model we employed demonstrated high accuracy in classifying tweet sentiments, with an overall accuracy of 83.84% on the test dataset (Table 4.2). This robust performance allows us to draw meaningful conclusions from the analyzed data.
 
 The sentiment distribution (Figure 4.2) showed a strong positive bias, with 79.3% of tweets expressing positive sentiment towards the Saudi Horse Cup. This overwhelmingly positive reception suggests that the event successfully generated enthusiasm and engagement among Twitter users. Such a favorable response aligns with previous research indicating that well-organized sporting events can significantly enhance public perception and stakeholder satisfaction [35].
+
+Table 4.2: Evaluation Results on Test Dataset
+
+| Metric    | Value   |
+|-----------|---------|
+| Accuracy  | 0.8384  |
+| Precision | 0.8263  |
+| Recall    | 0.8626  |
+| F1 Score  | 0.8440  |
+
 
 Our analysis also revealed interesting patterns in the temporal distribution of tweets (Figure 3). We observed peaks in tweet volume coinciding with key event milestones, such as the announcement of participants, the main race day, and the awards ceremony. This pattern supports the theory that social media engagement intensifies during critical moments of sporting events, as proposed by Bruns and Liang [12].
 

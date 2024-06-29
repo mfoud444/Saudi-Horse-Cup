@@ -1,0 +1,73 @@
+@startuml
+!define RECTANGLE rect
+!define NOTE left note
+!define RECTANGLE_COLOR white
+
+skinparam backgroundColor #F5F5F5
+skinparam handwritten false
+skinparam DefaultFontName Arial
+skinparam DefaultFontSize 12
+skinparam node {
+    BackgroundColor #DDEEFF
+    BorderColor #000080
+    FontColor #000080
+    FontSize 12
+    FontStyle bold
+}
+
+skinparam note {
+    BackgroundColor #FFFFE0
+    BorderColor #808000
+    FontColor #808000
+    FontSize 12
+}
+
+title Process for Model Classification in Study
+title #000080
+
+start
+
+:Data Collection;
+note right
+  - Gather data from various sources
+  - Use of twscrape for efficient Twitter data collection
+end note
+
+:Data Preprocessing and Visualization;
+note right
+  - Clean and preprocess the data
+  - Proper data preprocessing and cleaning
+  - Visualize data to understand patterns
+  - Visualization techniques for data exploration and result presentation
+end note
+
+:Sentiment Analysis;
+note right
+  - Perform sentiment analysis on the data
+  - Leveraging pre-trained models (BERT) for sentiment analysis
+end note
+
+:Model Training and Evaluation;
+note right
+  - Train the model using the processed data
+  - Evaluate the model's performance
+  - Metrics calculation for model evaluation (accuracy, precision, recall, F1 score)
+end note
+
+:Sentiment Prediction on Saudi Horse Cup tweets;
+note right
+  - Use the trained model to predict sentiments
+  - Focus on tweets related to the Saudi Horse Cup
+  - Batched prediction for efficient processing of large datasets
+end note
+
+:Final Analysis and Visualization;
+note right
+  - Conduct final analysis of results
+  - Visualize the outcomes and insights
+  - Visualization techniques for data exploration and result presentation
+end note
+
+stop
+
+@enduml

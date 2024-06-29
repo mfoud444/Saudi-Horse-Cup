@@ -1,48 +1,77 @@
-# Analyzing Global Sentiment on the Saudi Cup
+---
+title: "Analyzing Global Sentiment on the Saudi Cup"
+author: "Author"
+date: "2019-09-02"
+titlepage: true
+logo: cover.png
+titlepage-background: cover.png
+...
 
 
 ![](images/cover.png)
 
+# Table of Contents
 
-## Index Content 
+1. [Chapter 1: Introduction](#chapter-1-introduction)
 
-```
+   1.1 [Project Overview](#project-overview)
 
-Index Content ........................................................... ii
-List of Figures .................................................... iv
-List of Tables ..................................................... v
-### Chapter 1: Introduction ............................................ 1
-   1.1 Project Overview ............................................ 1
-   1.2 Saudi Horse Cup ............................................. 2
-   1.3 Objectives .................................................. 3
-   1.4 Scope of the Study .......................................... 4
-   1.5 Significance of the Study ................................... 5
-### Chapter 2: Data Collection ......................................... 7
-   2.1 Data Sources ................................................ 7
-   2.2 Data Collection Methods ..................................... 8
-   2.3 Data Sampling Strategy ...................................... 10
-   2.4 Ethical Considerations ...................................... 11
-### Chapter 3: Data Visualization and Preprocessing .................... 13
-   3.1 Data Exploration and Cleaning ............................... 13
-   3.2 Data Visualization .......................................... 14
-   3.3 Data Preprocessing .......................................... 17
-### Chapter 4: Sentiment Analysis ...................................... 19
-   4.1 Sentiment Analysis Overview ................................. 19
-   4.2 Model Selection ............................................. 20
-   4.3 Sentiment Analysis Implementation ........................... 21
-   4.4 Sentiment Analysis Results and Visualization ................ 22
-### Chapter 5: Conclusion and Future Work .............................. 24
-   5.1 Summary of Findings ......................................... 24
-   5.2 Implications of the Study ................................... 25
-   5.3 Limitations ................................................. 26
-   5.4 Recommendations for Future Research ......................... 27
-   5.5 Closing Remarks ............................................. 28
-References ......................................................... 29
-Appendices ......................................................... 31
-   A.1 Data Dictionary ............................................. 31
-   A.2 Glossary of Terms ........................................... 34
+   1.2 [Saudi Horse Cup](#saudi-horse-cup)
 
-```
+   1.3 [Objectives](#objectives)
+
+   1.4 [Scope of the Study](#scope-of-the-study)
+
+   1.5 [Significance of the Study](#significance-of-the-study)
+
+2. [Chapter 2: Data Collection](#chapter-2-data-collection)
+
+   2.1 [Data Sources](#data-sources)
+
+   2.2 [Data Collection Methods](#data-collection-methods)
+
+   2.3 [Data Sampling Strategy](#data-sampling-strategy)
+
+   2.4 [Ethical Considerations](#ethical-considerations)
+   
+3. [Chapter 3: Data Visualization and Preprocessing](#chapter-3-data-visualization-and-preprocessing)
+
+   3.1 [Data Exploration and Cleaning](#data-exploration-and-cleaning)
+
+   3.2 [Data Visualization](#data-visualization)
+
+   3.3 [Data Preprocessing](#data-preprocessing)
+
+4. [Chapter 4: Sentiment Analysis](#chapter-4-sentiment-analysis)
+
+   4.1 [Sentiment Analysis Overview](#sentiment-analysis-overview)
+
+   4.2 [Model Selection](#model-selection)
+
+   4.3 [Sentiment Analysis Implementation](#sentiment-analysis-implementation)
+
+   4.4 [Sentiment Analysis Results and Visualization](#sentiment-analysis-results-and-visualization)
+
+5. [Chapter 5: Conclusion and Future Work](#chapter-5-conclusion-and-future-work)
+
+   5.1 [Summary of Findings](#summary-of-findings)
+
+   5.2 [Implications of the Study](#implications-of-the-study)
+
+   5.3 [Limitations](#limitations)
+
+   5.4 [Recommendations for Future Research](#recommendations-for-future-research)
+
+   5.5 [Closing Remarks](#closing-remarks)
+
+6. [References](#references)
+
+7. [Appendices](#appendices)
+
+   A.1 [Data Dictionary](#data-dictionary)
+   
+   A.2 [Glossary of Terms](#glossary-of-terms)
+
 
 ## List of Figures
 
@@ -198,7 +227,7 @@ In the initial phase of data exploration and cleaning, we gained an understandin
 
 One crucial step in data cleaning was filtering the dataset to include only English language tweets. This was achieved by analyzing the distribution of tweet languages using a pie chart, as shown in the following figure:
 
-![Pie chart of tweet languages](images/tweet_languages.png "Pie chart of tweet languages")
+![Figure 1: Pie chart of tweet language](images/tweet_languages.png "Pie chart of tweet languages")
 
 The pie chart clearly indicated that English was the dominant language in the dataset. To focus our analysis on English tweets, we subset the dataset by retaining only rows with the 'en' language code.
 
@@ -209,35 +238,35 @@ To gain insights into the dataset and identify potential patterns or trends, we 
 1. **Tweet Length Distribution**:
 We visualized the distribution of tweet lengths using a histogram, as shown below:
 
-![Histogram of tweet lengths](images/tweet_length_distribution.png "Histogram of tweet lengths")
+![Figure 2: Histogram of tweet lengths](images/tweet_length_distribution.png "Histogram of tweet lengths")
 
 The histogram revealed that a significant portion of tweets in the dataset had lengths between 50 and 150 characters, which is typical for tweets on social media platforms. However, there were also instances of longer tweets, potentially indicating the presence of quoted or retweeted content.
 
 2. **Tweet Count Over Time**:
 To understand the temporal dynamics of the tweets, we plotted a line graph showing the tweet count over time:
 
-![Line plot of tweet count over time](images/tweet_count_over_time.png "Line plot of tweet count over time")
+![Figure 3: Line plot of tweet count over time](images/tweet_count_over_time.png "Line plot of tweet count over time")
 
 This visualization allowed us to identify periods of high or low tweet activity, which could be correlated with significant events or milestones related to the Saudi Horse Cup. For example, we observed a peak in tweet activity around the dates when the event was likely taking place.
 
 3. **Word Cloud of Hashtags**:
 We generated a word cloud to visualize the most frequently used hashtags in the dataset:
 
-![Word cloud of hashtags](images/hashtag_wordcloud.png "Word cloud of hashtags")
+![Figure 4: Word cloud of hashtags](images/hashtag_wordcloud.png "Word cloud of hashtags")
 
 The word cloud provided insights into the popular topics, themes, or keywords associated with the Saudi Horse Cup event. Hashtags like "#SaudiHorseCup" and "#SaudiArabia" were prominently visible, indicating their widespread use in the conversation.
 
 4. **Top Countries by User Count**:
 To gain insights into the geographical distribution of users contributing to the Saudi Horse Cup conversation, we created a horizontal bar plot showing the top 10 countries by user count:
 
-![Horizontal bar plot of top 10 countries by user count](images/top_countries_user_count.png "Horizontal bar plot of top 10 countries by user count")
+![Figure 5: Horizontal bar plot of top 10 countries by user count](images/top_countries_user_count.png "Horizontal bar plot of top 10 countries by user count")
 
 This visualization provided valuable information about the geographical regions with the highest user engagement in the conversation, which could be useful for targeted analysis or marketing efforts.
 
 5. **Top Users by Follower Count**:
 We also analyzed the influential users in the dataset by plotting a bar chart of the top 10 users with the highest follower counts:
 
-![Bar plot of top 10 users by follower count](images/top_users_follower_count.png "Bar plot of top 10 users by follower count")
+![Figure 6: Bar plot of top 10 users by follower count](images/top_users_follower_count.png "Bar plot of top 10 users by follower count")
 
 This analysis could potentially reveal the presence of influential voices or opinion leaders in the Saudi Horse Cup discourse, whose tweets may have a significant impact on public perception and sentiment.
 
@@ -276,7 +305,8 @@ After evaluating various NLP models, we selected the BERT (Bidirectional Encoder
 
 The sentiment analysis process involved several key steps, as illustrated in Figure 4.1.
 
-[Insert Figure 4.1: Process used to prepare and build the model classification used in this study]
+![Figure 7: Process used to prepare and build the model classification used in this study](images/flowchart.png)
+
 
 ### 4.3.1 Data Preparation
 
