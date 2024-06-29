@@ -1,7 +1,8 @@
 ---
 title: "Analyzing Global Sentiment on the Saudi Cup"
-author: "Author"
-date: "2019-09-02"
+author: "JALAWI Mohammed ALWAJI"
+email: jlwyalwajy@gmail.com
+date: "2023-2024"
 titlepage: true
 logo: cover.png
 titlepage-background: cover.png
@@ -69,7 +70,7 @@ titlepage-background: cover.png
 7. [Appendices](#appendices)
 
    A.1 [Data Dictionary](#data-dictionary)
-   
+
    A.2 [Glossary of Terms](#glossary-of-terms)
 
 
@@ -245,7 +246,7 @@ The histogram revealed that a significant portion of tweets in the dataset had l
 2. **Tweet Count Over Time**:
 To understand the temporal dynamics of the tweets, we plotted a line graph showing the tweet count over time:
 
-![Figure 3: Line plot of tweet count over time](images/tweet_count_over_time.png "Line plot of tweet count over time")
+![Figure 3: Line plot of tweet count over time](images/tweet_count_over_time.png) 
 
 This visualization allowed us to identify periods of high or low tweet activity, which could be correlated with significant events or milestones related to the Saudi Horse Cup. For example, we observed a peak in tweet activity around the dates when the event was likely taking place.
 
@@ -303,7 +304,7 @@ After evaluating various NLP models, we selected the BERT (Bidirectional Encoder
 
 ## 4.3 Sentiment Analysis Implementation
 
-The sentiment analysis process involved several key steps, as illustrated in Figure 4.1.
+The sentiment analysis process involved several key steps, as illustrated in Figure 7.
 
 ![Figure 7: Process used to prepare and build the model classification used in this study](images/flowchart.png)
 
@@ -379,7 +380,7 @@ These results indicate that the model performs well in classifying tweet sentime
 
 After training and evaluation, the model was applied to analyze the sentiment of tweets related to the Saudi Horse Cup. The results of this analysis are visualized in Figure 4.2.
 
-![Sentiment Distribution Pie Chart](images/sentiment_distribution.png "Sentiment Distribution Pie Chart")
+![Figure 8: Sentiment Distribution Pie Chart](images/sentiment_distribution.png "Sentiment Distribution Pie Chart")
 
 Figure 4.2: Sentiment Distribution Pie Chart
 

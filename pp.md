@@ -1,3 +1,13 @@
+---
+title: "Analyzing Global Sentiment on the Saudi Cup: A Social Media Perspective"
+author: "JALAWI Mohammed ALWAJI"
+email: jlwyalwajy@gmail.com
+date: "2023-2024"
+titlepage: true
+logo: cover.png
+titlepage-background: cover.png
+...
+
 # A B S T R A C T
 
 This study analyzes global sentiment towards the Saudi Horse Cup using data collected from X (formerly Twitter). Employing advanced natural language processing techniques and sentiment analysis, we examined a large dataset of tweets related to the event. The research reveals overwhelmingly positive sentiment, with approximately 79.3% of tweets expressing favorable opinions. This positive reception spans multiple countries, underlining the event's international appeal. The study provides valuable insights for event organizers, stakeholders, and researchers in the fields of sports management and social media analytics. Our findings contribute to understanding public perception of major sporting events and demonstrate the effectiveness of social media sentiment analysis in gauging global opinions.
@@ -63,9 +73,29 @@ The data collection process involved the following steps:
 
 3. Data retrieval: Using twscrape, we retrieved tweets containing the selected keywords and hashtags within the specified time frame. The collected data included the tweet text, timestamp, user information, and engagement metrics (e.g., retweet count, like count).
 
+The details of the collected data are shown in Table 1 below:
+
+Table 1: Description of Collected Data
+
+| Column                 | Description                                                      |
+|------------------------|------------------------------------------------------------------|
+| id                     | Unique identifier for each tweet                                 |
+| created_at             | Creation date and time of the tweet (in original format)         |
+| lang                   | Language of the tweet                                            |
+| text                   | Text content of the tweet                                        |
+| reply_count            | Number of replies to the tweet                                   |
+| hashtags               | List of hashtags used in the tweet                               |
+| view_count             | Number of times the tweet has been viewed                        |
+| user_id                | Unique identifier for the user who posted the tweet              |
+| user_username          | Screen name (username) of the user who posted the tweet          |
+| user_screen_name       | Screen name (username) of the user who posted the tweet          |
+| user_followers_count   | Number of followers the user has                                 |
+| user_location          | Location provided by the user in their profile                   |
+
+
 4. Initial data exploration: We performed an initial exploration of the collected data to understand its structure, volume, and basic characteristics. This included examining the distribution of tweet languages, as visualized in Figure 1, which guided our decision to focus on English-language tweets for the subsequent analysis.
 
-![Pie chart of tweet languages](images/tweet_languages.png "Figure 1: Distribution of Tweet Languages")
+![Figure 1: Distribution of Tweet Languages](images/tweet_languages.png)
 
 ## 3.2. Data Preparation and Pre-processing
 
@@ -93,6 +123,10 @@ The effectiveness of our pre-processing steps was visualized through various cha
 
 ## 3.3. Sentiment Annotation
 
+The sentiment analysis process involved several key steps, as illustrated in Figure 7.
+
+![Figure 7: Process used to prepare and build the model classification used in this study](images/flowchart.png)
+
 For training and evaluating our sentiment analysis model, we utilized the Sentiment140 dataset [32], which contains 1.6 million pre-labeled tweets with sentiment annotations. This dataset provided a robust foundation for our sentiment classification task.
 
 The sentiment labels in the Sentiment140 dataset were as follows:
@@ -107,7 +141,7 @@ This annotated dataset served as the ground truth for training and evaluating ou
 
 ## 3.4. Model Selection
 
-After evaluating various approaches, we selected the BERT (Bidirectional Encoder Representations from Transformers) model for our sentiment analysis task [28]. Specifically, we used the 'google-bert/bert-base-uncased' variant, which has been pre-trained on a large corpus of English text, including Twitter data [29].
+After evaluating various approaches, we selected the BERT (Bidirectional Encoder Representations from Transformers) model for our sentiment analysis task [28]. Specifically, we used the 'google-bert/bert-base-uncased' variant, which has been pre-trained on a large corpus of English text [29].
 
 The choice of BERT was motivated by several factors:
 1. State-of-the-art performance in various NLP tasks, including sentiment analysis [31]
@@ -166,11 +200,9 @@ The results of our evaluation and the insights gained from applying the model to
 
 ## 4.1 Explainability and Theory Building
 
-Our sentiment analysis of tweets related to the Saudi Horse Cup revealed several key findings that contribute to the understanding of public perception towards major sporting events. The BERT-based model we employed demonstrated high accuracy in classifying tweet sentiments, with an overall accuracy of 83.84% on the test dataset (Table 4.2). This robust performance allows us to draw meaningful conclusions from the analyzed data.
+Our sentiment analysis of tweets related to the Saudi Horse Cup revealed several key findings that contribute to the understanding of public perception towards major sporting events. The BERT-based model we employed demonstrated high accuracy in classifying tweet sentiments, with an overall accuracy of 83.84% on the test dataset (Table 1). This robust performance allows us to draw meaningful conclusions from the analyzed data.
 
-The sentiment distribution (Figure 4.2) showed a strong positive bias, with 79.3% of tweets expressing positive sentiment towards the Saudi Horse Cup. This overwhelmingly positive reception suggests that the event successfully generated enthusiasm and engagement among Twitter users. Such a favorable response aligns with previous research indicating that well-organized sporting events can significantly enhance public perception and stakeholder satisfaction [35].
-
-Table 4.2: Evaluation Results on Test Dataset
+Table 1: Evaluation Results on Test Dataset
 
 | Metric    | Value   |
 |-----------|---------|
@@ -179,12 +211,23 @@ Table 4.2: Evaluation Results on Test Dataset
 | Recall    | 0.8626  |
 | F1 Score  | 0.8440  |
 
+The sentiment distribution (Figure 8) showed a strong positive bias, with 79.3% of tweets expressing positive sentiment towards the Saudi Horse Cup. This overwhelmingly positive reception suggests that the event successfully generated enthusiasm and engagement among Twitter users. Such a favorable response aligns with previous research indicating that well-organized sporting events can significantly enhance public perception and stakeholder satisfaction [35].
+
+![Figure 8: Sentiment Distribution Pie Chart](images/sentiment_distribution.png "Sentiment Distribution Pie Chart")
+
 
 Our analysis also revealed interesting patterns in the temporal distribution of tweets (Figure 3). We observed peaks in tweet volume coinciding with key event milestones, such as the announcement of participants, the main race day, and the awards ceremony. This pattern supports the theory that social media engagement intensifies during critical moments of sporting events, as proposed by Bruns and Liang [12].
 
+![Figure 3: Line plot of tweet count over time](images/tweet_count_over_time.png) 
+
 The word cloud visualization of hashtags (Figure 4) provided insights into the most prominent themes and topics associated with the Saudi Horse Cup. Frequently occurring hashtags related to not only the event itself but also to broader themes such as international cooperation and cultural exchange. This finding supports Levermore's [10] assertion that major sporting events can serve as catalysts for promoting international understanding and collaboration.
 
+
+![Figure 4: Word cloud of hashtags](images/hashtag_wordcloud.png "Word cloud of hashtags")
+
 Furthermore, our analysis of user locations (Figure 5) demonstrated the truly global reach of the Saudi Horse Cup, with engagement from users across multiple countries. This international interest underscores the event's significance in the world of equestrian sports and supports the notion that social media plays a crucial role in globalizing sporting events [39].
+
+![Figure 5: Horizontal bar plot of top 10 countries by user count](images/top_countries_user_count.png "Horizontal bar plot of top 10 countries by user count")
 
 These results contribute to building a theory of social media sentiment analysis for major sporting events. They suggest that:
 
@@ -230,7 +273,7 @@ In conclusion, this study has demonstrated the value of social media sentiment a
 
 I would like to express my sincere gratitude to all those who have contributed to the successful completion of this research project. First and foremost, I thank my supervisors for their invaluable guidance, support, and expertise throughout the course of this study. Their insights and constructive feedback have been instrumental in shaping this research.
 
-I am also grateful to the Department of [Insert Department Name] at [Insert University Name] for providing the resources and academic environment conducive to conducting this research. Special thanks go to my fellow researchers and colleagues for their stimulating discussions and collaborative spirit.
+I am also Special thanks go to my fellow researchers and colleagues for their stimulating discussions and collaborative spirit.
 
 I would like to acknowledge the developers and maintainers of the open-source tools and libraries used in this study, particularly the creators of the twscrape library and the Hugging Face Transformers library. Their work has been crucial in enabling the data collection and analysis presented in this thesis.
 
